@@ -13,6 +13,8 @@ using `window.URL.createObjectURL` to create file stream, so please pay attentio
 
 ## Demo
 
+[click here to see the demo site](https://cody2333.github.io/csv-exportor/)
+[click here to see the demo code](./index.html)
 
 ```js
 /*
@@ -31,9 +33,11 @@ of file 'test.csv' immediately.
 import CsvExportor from 'csv-exportor'
 
 export default {
-  data: {
-    tableData: [["a","b","c"],["d","e","f"]],
-    header: ["foo","bar","baz"],
+  data() {
+    return {
+      tableData: [["a","b","c"],["d","e","f"]],
+      header: ["foo","bar","baz"],
+    }
   },
   methods: {
     exportCsv() {
