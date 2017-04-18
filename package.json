@@ -1,6 +1,6 @@
 {
   "name": "csv-exportor",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "convert array to csv file, and allow browser to automatically download the file",
   "main": "dist/index.js",
   "scripts": {
