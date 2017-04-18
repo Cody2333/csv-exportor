@@ -13,8 +13,9 @@ using `window.URL.createObjectURL` to create file stream, so please pay attentio
 
 ## Demo
 
-[click here to see the demo site](https://cody2333.github.io/csv-exportor/)
-[click here to see the demo code](./index.html)
+[demo page](https://cody2333.github.io/csv-exportor/)
+
+[demo source code](./index.html)
 
 ```js
 /*
