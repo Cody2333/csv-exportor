@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <div id="app">
+    <button @click="exportCsv">export csv</button>
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- 依赖于csv.js-->
+  <script src="./dist/csv.min.js"></script>
+
+  <script src="./dist/csv-exportor.min.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function() {
+        return {
+        tableData: [["a","b","c"],["d","e","f"]],
+        header: ["foo","bar","baz"],
+        }
+      },
+      methods: {
+        exportCsv: function() {
+          csvExportor.downloadCsv(
+            this.tableData, 
+            { header: this.header }, 
+            'test.csv');
+        }
+      }
+    })
+  </script>
+</html>

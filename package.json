@@ -1,27 +1,31 @@
 {
   "name": "csv-exportor",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "convert array to csv file, and allow browser to automatically download the file",
-  "main": "dist/index.js",
+  "main": "dist/csv-exportor.js",
   "scripts": {
-    "dist": "babel index.js --out-file dist/index.js",
-    "compress": "uglifyjs --compress --mangle -o dist/index.min.js -- dist/index.js",
-    "prepublish": "npm run dist && npm run compress"
+    "dist": "babel csv-exportor.js --out-file dist/csv-exportor.js",
+    "compress": "uglifyjs --compress --mangle -o dist/csv-exportor.min.js -- dist/csv-exportor.js",
+    "build": "npm run dist && npm run compress"
   },
   "dependencies": {
-    "comma-separated-values":"^3.6.4"
+    "comma-separated-values": "^3.6.4"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "uglify-js": "^2.8.22"
   },
   "keywords": [
     "csv"
   ],
-  "author": "cody",
-  "license": "MIT"
+  "author": {
+    "name": "cody",
+    "email": "wangkedi.wang@gmail.com"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/Cody2333/csv-exportor"
 }

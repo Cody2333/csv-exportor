@@ -7,8 +7,8 @@
     var mod = {
       exports: {}
     };
-    factory(mod, mod.exports, global.commaSeparatedValues);
-    global.index = mod.exports;
+    factory(mod, mod.exports, global.CSV);
+    global.csvExportor = mod.exports;
   }
 })(this, function (module, exports, _commaSeparatedValues) {
   'use strict';
