@@ -2,24 +2,44 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
 </head>
 <body>
   <div id="app">
-    <button @click="exportCsv">export csv</button>
+    <el-button @click="exportCsv">export table data to csv file </el-button>
+    <el-table
+      :data="tableData"
+      style="width: 100%">
+      <el-table-column
+        prop="col1"
+        label="foo">
+      </el-table-column>
+      <el-table-column
+        prop="col2"
+        label="bar">
+      </el-table-column>
+      <el-table-column
+        prop="col3"
+        label="baz">
+      </el-table-column>
+    </el-table>
   </div>
 </body>
   <!-- 先引入 Vue -->
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
   <!-- 依赖于csv.js-->
   <script src="./dist/csv.min.js"></script>
-
+  
   <script src="./dist/csv-exportor.min.js"></script>
   <script>
     new Vue({
       el: '#app',
       data: function() {
         return {
-        tableData: [["a","b","c"],["d","e","f"]],
+        tableData: [{col1:'a',col2:'b',col3:'c'},{col1:'d',col2:'e',col3:'f'}],
         header: ["foo","bar","baz"],
         }
       },
