@@ -78,7 +78,7 @@ const CsvExportor = require('csv-exportor')
 
 ```html
 <!-- browser globals -->
-<script src="YOUR_PATH_TO/node-modules/csv-exportor/dist/index.min.js"></script>
+<script src="YOUR_PATH_TO/node-modules/csv-exportor/dist/csv-exportor.min.js"></script>
 ```
 
 ## Usage
