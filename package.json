@@ -1,0 +1,27 @@
+{
+  "name": "csv-exportor",
+  "version": "0.0.1",
+  "description": "convert array to csv file, and allow browser to automatically download the file",
+  "main": "dist/index.js",
+  "scripts": {
+    "dist": "babel index.js --out-file dist/index.js",
+    "compress": "uglifyjs --compress --mangle -o dist/index.min.js -- dist/index.js",
+    "prepublish": "npm run dist && npm run compress"
+  },
+  "dependencies": {
+    "comma-separated-values":"^3.6.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "uglify-js": "^2.8.22"
+  },
+  "keywords": [
+    "csv"
+  ],
+  "author": "cody",
+  "license": "MIT"
+}
