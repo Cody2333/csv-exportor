@@ -21,6 +21,7 @@ function genUrl(data, options) {
 function downloadCsv(data, options, fileName) {
   const url = genUrl(data, options);
   const a = document.createElement('a');
+  document.body.appendChild(a);
   a.href = url;
   a.download = fileName;
   a.click();
