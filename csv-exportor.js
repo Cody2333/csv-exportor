@@ -26,6 +26,7 @@ function downloadCsv(data, options, fileName) {
   a.download = fileName;
   a.click();
   window.URL.revokeObjectURL(url);
+  a.remove();
 }
 
 export default {
